@@ -3,7 +3,5 @@ def turn_count(board)
 end
 
 def current_player(board)
-  num_x = board.select { |square| square == 'X' }
-  num_o = board.select { |square| square == 'O' }
-  num_x.count > num_o.count ? "O" : "X"
+  turn_count(board) % 2 == 0 ? "X" : "O"
 end
